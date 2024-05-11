@@ -26,6 +26,8 @@ body::-webkit-scrollbar-thumb {
     height: 6vh;
     width: 100%;
     background-color: #4F80AA;
+
+    padding-bottom: 3px;
 }
 
 .cab_left {
