@@ -16,11 +16,11 @@
         </div>
 
         <div class="cab_right">
-            <a href=""><h2 class="cab_ajudar">Quero ajudar</h2></a>
+            <a href="ajuda.html"><h2 class="cab_ajudar">Quero ajudar</h2></a>
             <h2 class="cab_ajudar">|</h2>
-            <a href=""><h2 class="cab_ajudar">Sobre</h2></a>
+            <a onclick="anchor()"><h2 class="cab_ajudar" id="1">Sobre</h2></a>
             <h2 class="cab_ajudar">|</h2>
-            <a href=""><h2 class="cab_ajudar">Fale conosco</h2></a>
+            <a onclick="anchor()"><h2 class="cab_ajudar" id="2">Fale conosco</h2></a>
         </div>
 
         <div class="cab_right_drop">
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div class="infos">
+    <div class="infos" id="anchor1">
         <h1 class="info_title">
             SOBRE:
         </h1>
@@ -67,11 +67,42 @@
         </h2>
 
         <div class="div_btn">
-            <button class="btn_ajudar">QUERO AJUDAR!</button>
+            <button class="btn_ajudar" onclick="window.location.href = 'ajuda.html' ">QUERO AJUDAR!</button>
         </div>
     </div>
 
+    <div class="img_container">
+        <div class="img" id="img2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row2">
+        </div>
+    </div>
+
+    <div class="div_contato" id="anchor2">
+        <h1 class="contato_title">FALE CONOSCO:</h1>
+    </div>
+
     <script>
+        var buttons = document.querySelectorAll('.cab_ajudar')
+        buttons.forEach(function(button) {
+
+            button.addEventListener('click', function() {
+                var btnId = this.id
+                var targetDiv = document.getElementById('anchor'+btnId)
+
+                targetDiv.scrollIntoView ({
+                    behavior:"smooth"
+                });
+            });
+        });
+
         const imgs = document.querySelectorAll("#img img")
 
         idx = 1
@@ -81,9 +112,9 @@
 
             if (idx > imgs.length) {
                 idx = 1
-                document.querySelector(`#img :nth-child(${imgs.length})`).style.opacity = '.5'
-                document.querySelector(`#img :nth-child(${imgs.length})`).style.width = 'calc(5.5vh + 7.5vw)'
-                document.querySelector(`#img :nth-child(${imgs.length})`).style.height = 'calc(5.5vh + 7.5vw)'
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.opacity = '.3'
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.width = 'calc(4.5vh + 6.5vw)'
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.height = 'calc(4.5vh + 6.5vw)'
             }
 
             const img = document.querySelector(`#img :nth-child(${idx})`)
@@ -101,7 +132,38 @@
             }
         }
 
+        const imgs2 = document.querySelectorAll("#img2 img")
+        idx2 = imgs2.length
+
+
+        function image_hover2() {
+            idx2 -= 1
+
+            if (idx2 < 1) {
+                idx2 = imgs.length
+                document.querySelector(`#img2 :nth-child(${1})`).style.opacity = '.3'
+                document.querySelector(`#img2 :nth-child(${1})`).style.width = 'calc(4.5vh + 6.5vw)'
+                document.querySelector(`#img2 :nth-child(${1})`).style.height = 'calc(4.5vh + 6.5vw)'
+            }
+
+            const img = document.querySelector(`#img2 :nth-child(${idx2})`)
+            img.style.opacity = '1'
+            img.style.width = 'calc(5.5vh + 7.5vw)'
+            img.style.height = 'calc(5.5vh + 7.5vw)'
+
+
+            const ltr_img = document.querySelector(`#img2 :nth-child(${idx2+1})`)
+
+            if (idx2 < imgs2.length) {
+                ltr_img.style.opacity = '.3'
+                ltr_img.style.width = 'calc(4.5vh + 6.5vw)'
+                ltr_img.style.height = 'calc(4.5vh + 6.5vw)'
+            }
+        }
+
         setInterval(image_hover, 1800)
+        setInterval(image_hover2, 1800)
+
     </script>
 
 </body>
