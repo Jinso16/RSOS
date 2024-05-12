@@ -250,6 +250,54 @@ body::-webkit-scrollbar-thumb {
     font-size: calc(3.5vh + 3vw);
 }
 
+.info_txt {
+    color: #ffffff;
+    margin: 1vh 3vw 0px 3vw;
+
+    font-weight: 500;
+    font-size: calc(1vh + .5vw);
+
+    text-align:justify;
+}
+
+.div_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+    margin-top: calc(2vh + 5vw);
+}
+
+.btn_ajudar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: calc(1.5vw + .5vh);
+    color: #ffffff;
+
+    background-color: #002133;
+    width: calc(16vw + 10vh);
+    height: calc(6vw + 3vh);
+
+    border: 0;
+    border-radius: 8px;
+
+    transition: .5s ease;
+}
+
+.btn_ajudar:hover {
+    background-color: #0B3B55;
+
+    width: 90%;
+
+    letter-spacing: 10px;
+}
+
 a {
     text-decoration: none;
 }
@@ -273,5 +321,13 @@ a {
 
     .cab_right_drop {
         display: block;
+    }
+
+    .infos {
+        height: 75vh;
+    }
+
+    .info_txt {
+        width: 90%;
     }
 }
