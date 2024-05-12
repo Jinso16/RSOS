@@ -6,16 +6,91 @@
     <title>RS.O.S | Página Inicial</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="cab">
         <div class="cab_left">
             <h1 class="title">RS.O.S</h1>
         </div>
-        
+
         <div class="cab_right">
             <a href=""><h2 class="cab_ajudar">Quero ajudar</h2></a>
+            <h2 class="cab_ajudar">|</h2>
+            <a href=""><h2 class="cab_ajudar">Sobre</h2></a>
+            <h2 class="cab_ajudar">|</h2>
+            <a href=""><h2 class="cab_ajudar">Fale conosco</h2></a>
+        </div>
+
+        <div class="cab_right_drop">
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
         </div>
     </div>
+
+    <div class="container">
+        <div class="container_left">
+            <h1 class="cont_txt">AJUDE O RS</h1>
+            <h2 class="cont_subtxt">As enchentes destruiram <br> nossos sonhos...</h2>
+        </div>
+
+        <div class="container_right">
+            <img src="imagens/RS_pontos.png" alt="mapa_rs" class="rs_pontos">
+        </div>
+    </div>
+
+    <div class="img_container">
+        <div class="img" id="img">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+            <img src="imagens/enchente1.jpg" alt="enchentes1" class="imgs_row">
+        </div>
+    </div>
+
+    <div class="infos">
+        <h1 class="info_title">
+            SOBRE:
+        </h1>
+    </div>
+
+    <script>
+        const imgs = document.querySelectorAll("#img img")
+
+        idx = 1
+
+        function image_hover() {
+            idx++
+
+            if (idx > imgs.length) {
+                idx = 1
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.opacity = '.5'
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.width = 'calc(5.5vh + 7.5vw)'
+                document.querySelector(`#img :nth-child(${imgs.length})`).style.height = 'calc(5.5vh + 7.5vw)'
+            }
+
+            const img = document.querySelector(`#img :nth-child(${idx})`)
+            img.style.opacity = '1'
+            img.style.width = 'calc(5.5vh + 7.5vw)'
+            img.style.height = 'calc(5.5vh + 7.5vw)'
+
+
+            const ltr_img = document.querySelector(`#img :nth-child(${idx-1})`)
+
+            if (idx > 1) {
+                ltr_img.style.opacity = '.3'
+                ltr_img.style.width = 'calc(4.5vh + 6.5vw)'
+                ltr_img.style.height = 'calc(4.5vh + 6.5vw)'
+            }
+        }
+
+        setInterval(image_hover, 1800)
+    </script>
+
 </body>
 </html>
