@@ -18,9 +18,9 @@
         <div class="cab_right">
             <a href="ajuda.html"><h2 class="cab_ajudar">Quero ajudar</h2></a>
             <h2 class="cab_ajudar">|</h2>
-            <a onclick="anchor()"><h2 class="cab_ajudar" id="1">Sobre</h2></a>
+            <a onclick="scroll()"><h2 class="cab_ajudar" id="1">Sobre</h2></a>
             <h2 class="cab_ajudar">|</h2>
-            <a onclick="anchor()"><h2 class="cab_ajudar" id="2">Fale conosco</h2></a>
+            <a onclick="scroll()"><h2 class="cab_ajudar" id="2">Fale conosco</h2></a>
         </div>
 
         <div class="cab_right_drop">
@@ -90,6 +90,20 @@
     </div>
 
     <script>
+        var searchParam = window.location.search
+        var params = new URLSearchParams(searchParam)
+
+        var scrollto = params.get('scrollTo')
+        var searchId = params.get('id')
+
+        if (scrollto == 'true') {
+            var targetDiv = document.getElementById('anchor'+searchId)
+
+            targetDiv.scrollIntoView ({
+                behavior:"smooth"
+            });
+        }
+
         var buttons = document.querySelectorAll('.cab_ajudar')
         buttons.forEach(function(button) {
 

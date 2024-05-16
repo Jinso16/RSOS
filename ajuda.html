@@ -6,8 +6,221 @@
     <title>RS.O.S | Ajuda</title>
 
     <link rel="stylesheet" href="style_ajuda.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <div class="cab">
+        <div class="cab_left">
+            <h1 class="title">RS.O.S</h1>
+        </div>
+
+        <div class="cab_right">
+            <a href="ajuda.html"><h2 class="cab_ajudar">Quero ajudar</h2></a>
+            <h2 class="cab_ajudar">|</h2>
+            <a onclick="anchor()"><h2 class="cab_ajudar" id="1">Sobre</h2></a>
+            <h2 class="cab_ajudar">|</h2>
+            <a onclick="anchor()"><h2 class="cab_ajudar" id="2">Fale conosco</h2></a>
+        </div>
+
+        <div class="cab_right_drop">
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+        </div>
+    </div>
+
+    <div class="search_div">
+        <div>
+            <label for="search" class="label_pesquisa">Pesquisar: </label>
+        </div>
+
+        <div class="inputs">
+            <input type="search" name="search" id="search" class="search">
+            <select name="select_tipo" id="select_tipo" class="select_tipo">
+                <option value="PIX">PIX</option>
+                <option value="instituições">Instituições</option>
+                <option value="PontosColeta">Pontos de Coleta</option>
+            </select>
+
+            <select name="select_cidade" id="select_cidade" class="select_cidade">
+                <option value="POA">Porto Alegre</option>
+                <option value="CXS">Caxias do Sul</option>
+                <option value="ELD">Eldorado do Sul</option>
+                <option value="CAN">Canoas</option>
+                <option value="CRU_SUL">Cruzeiro do Sul</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Vakinha BADIN</h1>
+                <h2 class="card_cidade" id="cidade">(RS)</h1>
+                <img src="imagens/Badin.png" alt="" class="card_image">
+                <h2 class="card_hover" id="txt">Clique para saber mais.</h2>
+                <h1 class="card_title" id="tipo">PIX</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <img src="imagens/Seminario.png" alt="" class="card_image">
+                <h2 class="card_hover" id="txt">Clique para saber mais.</h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="base_card" id="card">
+                <h1 class="card_name" id="name">Seminário NSA</h1>
+                <h2 class="card_cidade" id="cidade">(CXS)</h2>
+                <h2 class="card_hover" id="txt"></h2>
+                <h1 class="card_title" id="tipo">Instituição</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        anchor()
+
+        var cards = document.querySelectorAll('.card');
+        var name
+        var tipo
+        var cidade
+
+        cards.forEach(function(card) {
+            card.addEventListener('mouseover', function() {
+                name = card.querySelector('#name').innerHTML
+                tipo = card.querySelector('#tipo').innerHTML
+                cidade = card.querySelector('#cidade').innerHTML
+
+                card.querySelector('#name').innerHTML = ''
+                card.querySelector('#tipo').innerHTML = ''
+                card.querySelector('#cidade').innerHTML = ''
+                card.querySelector('#txt').style.display = 'block'
+                card.querySelector('.card_image').style.display = 'none'
+            })
+
+            card.addEventListener('mouseout', function() {
+                var card_hover = card.querySelector('.base_card').querySelector('.card_hover')
+                card.querySelector('#name').innerHTML = name
+                card.querySelector('#tipo').innerHTML = tipo
+                card.querySelector('#cidade').innerHTML = cidade
+                card.querySelector('.card_image').style.display = 'block'
+
+                card.querySelector('#txt').style.display = 'none'
+            })
+        })
+    </script>
 </body>
 </html>

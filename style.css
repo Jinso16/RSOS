@@ -20,8 +20,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cab {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex;
+    justify-content: space-between;
+
     height: 6vh;
     width: 100%;
     background-color: #266080;
@@ -50,6 +51,8 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 6px;
 
     transition: .3s ease;
+
+    cursor: default;
 }
 
 .cab_right {
@@ -150,13 +153,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+
     height: 80vh;
 
     margin-left: 10vw;
     margin-right: 10vw;
+
     align-items: center;
+    justify-content: space-between;
 }
 
 .cont_txt {
@@ -179,6 +184,7 @@ body::-webkit-scrollbar-thumb {
 
 .cont_txt:hover, .cont_subtxt:hover {
     text-shadow: #266080 0px 0px 15px;
+    cursor: default;
 }
 
 .container_right {
@@ -195,6 +201,8 @@ body::-webkit-scrollbar-thumb {
 
 .rs_pontos:hover {
     width: calc(17vw + 17vh);
+
+    cursor:default;
 }
 
 .img_container {
@@ -250,7 +258,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .infos {
-    background-image: linear-gradient(180deg, #0B3B55, #266080, #266080);
+    background-image: linear-gradient(180deg, #0B3B55, #266080, #0B3B55);
 
     padding-left: calc(1vh + 2vw);
 
@@ -291,7 +299,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: calc(1.5vw + .5vh);
     color: #ffffff;
 
@@ -300,22 +308,24 @@ body::-webkit-scrollbar-thumb {
     height: calc(6vw + 3vh);
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 10px;
 
     transition: .5s ease;
 }
 
 .btn_ajudar:hover {
-    background-color: #0B3B55;
+    box-shadow: inset 0px 0px 30px 5px #85BAD6;
 
-    width: 90%;
+    width: calc(26vw + 14vh);
 
-    letter-spacing: 2.5vw;
+    letter-spacing: calc(.8vw + 0.2vh);
+
+    cursor: pointer;
 }
 
 .div_contato {
     background-color: #85BAD6;
-    height: 90vh;
+    height: 85vh;
 
     padding-top: calc(2vh + 1vw);
     padding-left: calc(1vh + 2vw);
@@ -333,6 +343,10 @@ body::-webkit-scrollbar-thumb {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
