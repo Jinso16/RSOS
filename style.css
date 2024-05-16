@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
 
     height: 6vh;
+    min-height: 30px;
     width: 100%;
     background-color: #266080;
 
@@ -40,7 +41,7 @@ body::-webkit-scrollbar-thumb {
     color: #ffffff;
     font-weight: 900;
 
-    font-size: calc(3vh + .2vw);
+    font-size: calc(10px + calc(2.2vh + .2vw));
 
     margin-left: 15px;
 
@@ -143,7 +144,7 @@ body::-webkit-scrollbar-thumb {
     color: #ffffff;
     font-weight: 500;
 
-    font-size: calc(1.5vh + .2vw);
+    font-size: calc( 8px +  calc(.5vh + .2vw));
 
     transition: .2s linear;
 }

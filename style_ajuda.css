@@ -8,6 +8,17 @@ body {
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+
+  opacity: 0.2;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0B3B55;
+}
+
 .cab {
     display: flex;
     justify-content: space-between;
@@ -63,7 +74,7 @@ body {
 }
 
 .menu {
-    --s: 3vh; /* control the size */
+    --s: calc( 15px +  1vh); /* control the size */
   --c: rgb(255, 255, 255); /* the color */
   
   height: var(--s);
@@ -151,7 +162,7 @@ body {
 .label_pesquisa {
   color: #ffffff;
   font-weight: 500;
-  font-size: calc(8px + 1.5vh);
+  font-size: calc(12px + 1vh);
 
   margin-left: 4vw;
 }
@@ -162,18 +173,22 @@ body {
   justify-content: center;
 }
 
+.selects {
+  display: flex;
+}
+
 .search {
   display: flex;
-  align-items: center;
-
+  
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: calc( 8px + .8vh);
+  font-size: calc( 12px + .4vh);
 
   width: 50vw;
-  height: 3.5vh;
-  min-height: 20px;
+  height: 4.5vh;
+  min-height: 30px;
 
+  margin-top: 1vh;
   margin-right: 3px;
 
   border-radius: 10px;
@@ -194,13 +209,16 @@ body {
 
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: calc( 8px + .8vh);
+  font-size: calc( 12px + .4vh);
 
+  margin-top: 1vh;
   margin-left: 3px;
 
+  padding-left: 10px;
+
   width: 20vw;
-  height: 3.5vh;
-  min-height: 20px;
+  height: 4.5vh;
+  min-height: 30px;
 
   border: 3px solid #266080;
   border-right: 0;
@@ -215,17 +233,20 @@ body {
 .select_cidade {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: calc( 8px + .8vh);
+  font-size: calc( 12px + .4vh);
 
   width: 20vw;
-  height: 3.5vh;
-  min-height: 20px;
+  height: 4.5vh;
+  min-height: 30px;
 
   border: 3px solid #266080;
   border-left: 0;
 
   border-radius: 0px 10px 10px 0px;
   padding-right: 10px;
+  padding-left: 10px;
+
+  margin-top: 1vh;
 }
 
 .select_cidade:focus {
@@ -337,6 +358,29 @@ a:hover {
 
   .cab_right_drop {
     display: block;
+  }
+
+  .search_div {
+    align-items: center;
+  }
+
+  .label_pesquisa {
+    margin: 0;
+  }
+
+  .inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 80vw;
+    margin: 1.2vh 0 0 0;
+  }
+
+  .select_tipo, .select_cidade {
+    width: 40vw;
+    margin: 1.2vh 0 0 0;
   }
 }
 
